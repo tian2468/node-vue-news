@@ -1,0 +1,14 @@
+### 创建分类
+@url= http://localhost:3000/admin/api/rest
+@json = Content-Type:application/json
+POST {{url}}/categories
+{{json}}
+
+{
+    "name":"123"
+}
+### ????
+GET {{url}}/categories
+
+###
+GET {{url}}/categories
