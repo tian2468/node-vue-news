@@ -69,7 +69,7 @@ module.exports = app => {
     })
     app.post('/admin/api/upload', loginAuth(), upload.single('upload'), async (req, res) => {
         const file = req.file
-        file.url = `http://localhost:3000/uploads/${file.filename}`
+        file.url = `http://news.tzzown.com/uploads/${file.filename}`
         res.send(file)
     })
     // 用户相关

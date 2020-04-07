@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"node-vue-news.categories"}],"uuid":"bc4e3b8cedc04657a49a1e8d621c22fb"}
