@@ -1,8 +1,11 @@
 const express = require('express')
 const app = express()
 require('./routers/admin/index')(app)
+require('./routers/web/index')(app)
 require('./plugins/db')(app)
 app.use('/uploads', express.static(__dirname + '/uploads'))
+app.use('/admin/', express.static(__dirname + '/admin'))
+app.use('/', express.static(__dirname + '/web'))
 app.listen(3000, () => {
     console.log('start port 3000!')
 })

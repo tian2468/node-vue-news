@@ -5,6 +5,8 @@ import NewsList from '../views/news/NewsList.vue'
 import UserEdit from '../views/user/UserEdit.vue'
 import UserList from '../views/user/UserList.vue'
 import Login from '../views/Login.vue'
+import BannerEdit from '../views/banner/BannerEdit.vue'
+import BannerList from '../views/banner/BannerList.vue'
 Vue.use(VueRouter)
 
 const routes = [{
@@ -52,15 +54,21 @@ const routes = [{
     path: '/user/list',
     name: 'UserList',
     component: UserList
+  }, {
+    path: '/banner/edit',
+    name: 'BannerEdit',
+    component: BannerEdit
+  }, {
+    path: '/banner/list',
+    name: 'BannerList',
+    component: BannerList
   }]
 }]
 
 const router = new VueRouter({
-  mode: 'history',
   routes
 })
 router.beforeEach((to, from, next) => {
-  console.log(to)
   if (to.meta.title) {
     document.title = to.meta.title
   }

@@ -68,7 +68,6 @@ export default {
       // An example of using FormData
       // NOTE: Your key could be different such as:
       // formData.append('file', file)
-      console.log(file);
       let formData = new FormData();
       formData.append("upload", file);
       const res = await this.$http.post("/upload", formData);

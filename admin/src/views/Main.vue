@@ -16,6 +16,11 @@
             <el-menu-item index="/news/edit">新建新闻</el-menu-item>
             <el-menu-item index="/news/list">新闻列表</el-menu-item>
           </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">首页轮播</template>
+            <el-menu-item index="/banner/edit">新建轮播</el-menu-item>
+            <el-menu-item index="/banner/list">轮播列表</el-menu-item>
+          </el-menu-item-group>
         </el-submenu>
         <el-submenu index="2">
           <template slot="title">

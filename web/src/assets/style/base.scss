@@ -1,0 +1,67 @@
+// color
+$colors:("primary":#FA9954, "white":white, "date":#939393, "black":#000);
+
+@each $colorKey,
+$color in $colors {
+    .text-#{$colorKey} {
+        color: $color;
+    }
+
+    .bg-#{$colorKey} {
+        background: $color;
+    }
+}
+
+// text
+@each $var in (left, center, right) {
+    .text-#{$var} {
+        text-align: $var;
+    }
+}
+
+// front-size
+$base-font-size:1rem;
+$font-sizes:(min:0.625rem, lg:1.0769rem); // flex
+
+//flex
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+$flex-jc:(start:flex-start,
+    end:flex-end,
+    center:flex-center,
+    between:space-between,
+    around:space-around);
+
+@each $jcKey,
+$value in $flex-jc {
+    .jc-#{$jcKey} {
+        justify-content: $value
+    }
+}
+
+$flex-ai:(start:flex-start,
+    end:flex-end,
+    center:flex-center,
+    stretch:stretch);
+
+@each $aiKey,
+$value in $flex-ai {
+    .ai-#{$aiKey} {
+        align-items: $value
+    }
+}
+
+.flex-1 {
+    flex: 1
+}
+
+@function px2rem($px) {
+    $rem: 35.5;
+    @return ($px/$rem)+rem
+}
